@@ -1,5 +1,3 @@
-from flask_restful import Resource
-
 from app import db, setup_db, load_fixtures
 
 user_frameworks = db.Table(
@@ -17,6 +15,12 @@ class User(db.Model):
         'Framework', secondary=user_frameworks, lazy='subquery',
         backref=db.backref('users', lazy=True)
     )
+
+    @property
+    def languages(self):
+        _languages = list(set([f.language for f in self.frameworks]))
+        print(_languages)
+        return _languages
 
     @property
     def backend(self):
@@ -59,48 +63,6 @@ class Language(db.Model):
 
     def __repr__(self):
         return f'<Language { str(self.name) }>'
-
-
-class UserListResource(Resource):
-    def get(self):
-        users = User.query.all()
-        return {
-            'items': [{
-                'id': user.id,
-                'email': user.email,
-                'backend': user.backend,
-                'frontend': user.frontend,
-                'fullstack': user.fullstack,
-                'frameworks': [
-                    framework.id for framework in user.frameworks
-                ],
-            } for user in users]
-        }
-
-
-class FrameworkListResource(Resource):
-    def get(self):
-        frameworks = Framework.query.all()
-        return {
-            'items': [{
-                'name': framework.name,
-                'language': framework.language.name,
-                'backend': framework.backend,
-                'frontend': framework.frontend,
-            } for framework in frameworks]
-        }
-
-
-class LanguageListResource(Resource):
-    def get(self):
-        languages = Language.query.all()
-        return {
-            'items': [{
-                'name': str(language.name),
-                'backend': language.backend,
-                'frontend': language.frontend,
-            } for language in languages]
-        }
 
 
 def initialize_db():

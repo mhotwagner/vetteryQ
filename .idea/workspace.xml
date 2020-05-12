@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="" />
+    <list default="true" id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bcwTjyi9FLX4kZuYwueEr3Otzs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -30,7 +41,7 @@
       <updated>1588944699963</updated>
       <workItem from="1588944703542" duration="1537000" />
       <workItem from="1588946572650" duration="7373000" />
-      <workItem from="1588961933551" duration="8834000" />
+      <workItem from="1588961933551" duration="10450000" />
     </task>
     <servers />
   </component>
@@ -46,17 +57,17 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="1018" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977@0.23.1920.977" timestamp="1588976534566" />
-    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1588976885132">
+    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1589289716771">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1920.977@0.23.1920.977" timestamp="1588976885132" />
+    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1920.977@0.23.1920.977" timestamp="1589289716771" />
     <state x="938" y="150" key="SettingsEditor" timestamp="1588952953217">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="938" y="150" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1588952953217" />
-    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1588969407967">
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1589289789035">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1588969407967" />
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1589289789035" />
   </component>
 </project>

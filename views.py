@@ -1,8 +1,8 @@
 from flask import request
 
 from app import app, fake, load_fixtures, api
-from models import User, initialize_db, UserListResource, FrameworkListResource, LanguageListResource
-
+from models import User, initialize_db
+from api import UserListResource, FrameworkListResource, LanguageListResource
 
 api.add_resource(UserListResource, '/api/users/')
 api.add_resource(FrameworkListResource, '/api/frameworks/')
