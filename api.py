@@ -1,3 +1,6 @@
+from distutils.util import strtobool
+
+from flask import request
 from flask_restful import Resource
 
 from models import User, Framework, Language
@@ -63,7 +66,18 @@ class UserSerializer:
 
 class UserListResource(Resource):
     def get(self):
+        backend = strtobool(request.args.get('backend'))
+        frontend = strtobool(request.args.get('frontend'))
+
         users = User.query.all()
+
+        if backend and not frontend:
+            print('[INFO] Showing backend users')
+            users = [user for user in users if user.backend]
+        elif frontend and not backend:
+            print('[INFO] Showing frontend users')
+            users = [user for user in users if user.frontend]
+
         return {
             'items': [UserSerializer(user).data for user in users]
         }

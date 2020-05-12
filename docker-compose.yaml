@@ -4,20 +4,34 @@ services:
     build: .
     restart: always
     networks:
-#      - nginx_network
       - postgres_network
-#      - redis_network
+      - flask_network
+      - react_network
     links:
       - postgres
-#      - redis
     depends_on:
       - postgres
-#      - redis
     ports:
       - "8000:8000"
     environment:
       - POSTGRES_URI=postgresql://vettery:vettery@postgres:5432/vettery
+    volumes: ['.:/vetteryQ']
     command: make run
+
+  react:
+    build: vqf/.
+    restart: always
+    stdin_open: true
+    networks:
+      - flask_network
+      - react_network
+    links:
+      - flask
+    depends_on:
+      - flask
+    ports:
+      - "3000:3000"
+      - "8000"
 
   postgres:
     image: postgres
@@ -33,40 +47,14 @@ services:
       - postgres_volume:/var/lib/postgresql/data
     networks:
       - postgres_network
-#
-#  redis:
-#    restart: always
-#    image: redis:latest
-#    ports:
-#      - "6379:6379"
-#    volumes:
-#      - redis_volume:/data
-#    networks:
-#      - redis_network
-#
-#  nginx:
-#    image: nginx:1.13
-#    ports:
-#      - "8000:80"
-#    volumes:
-#      - ./nginx/conf.d:/etc/nginx/conf.d
-#      - static_volume:/django/static
-#      - media_volume:/django/media
-#    networks:
-#      - nginx_network
-#    depends_on:
-#      - django
-#
+
 volumes:
   postgres_volume:
-#  static_volume:
-#  media_volume:
-#  redis_volume:
-#
+
 networks:
   postgres_network:
     driver: bridge
-#  redis_network:
-#    driver: bridge
-#  nginx_network:
-#    driver: bridge
+  flask_network:
+    driver: bridge
+  react_network:
+    driver: bridge

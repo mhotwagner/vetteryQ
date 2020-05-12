@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vqf/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vqf/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vqf/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vqf/src/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/src/UserCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,8 @@
       <updated>1588944699963</updated>
       <workItem from="1588944703542" duration="1537000" />
       <workItem from="1588946572650" duration="7373000" />
-      <workItem from="1588961933551" duration="12175000" />
+      <workItem from="1588961933551" duration="17566000" />
+      <workItem from="1589308872214" duration="4157000" />
     </task>
     <servers />
   </component>
@@ -72,9 +77,9 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="938" y="150" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1588952953217" />
-    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1589289789035">
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1589312776947">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
-    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1589289789035" />
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1589312776947" />
   </component>
 </project>
