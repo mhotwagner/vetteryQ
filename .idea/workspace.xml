@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1bcwTjyi9FLX4kZuYwueEr3Otzs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="" />
+      <created>1588944699963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588944699963</updated>
+      <workItem from="1588944703542" duration="1537000" />
+      <workItem from="1588946572650" duration="7373000" />
+      <workItem from="1588961933551" duration="8834000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="849" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588952930783">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="849" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.977@0.23.1920.977" timestamp="1588952930783" />
+    <state x="1018" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588976534566">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="1018" y="265" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977@0.23.1920.977" timestamp="1588976534566" />
+    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1588976885132">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="339" y="95" width="342" height="763" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1920.977@0.23.1920.977" timestamp="1588976885132" />
+    <state x="938" y="150" key="SettingsEditor" timestamp="1588952953217">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="938" y="150" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1588952953217" />
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup" timestamp="1588969407967">
+      <screen x="0" y="23" width="1920" height="977" />
+    </state>
+    <state x="1105" y="238" width="670" height="676" key="search.everywhere.popup/0.23.1920.977@0.23.1920.977" timestamp="1588969407967" />
+  </component>
+</project>
