@@ -9,6 +9,8 @@ import PublishIcon from '@material-ui/icons/Publish';
 import StorageIcon from '@material-ui/icons/Storage';
 import ViewQuiltIcon from '@material-ui/icons/ViewQuilt';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -47,6 +49,11 @@ export default function RecipeReviewCard(props) {
                 title={props.user.email}
                 subheader={title}
             />
+            <CardContent>
+                <Typography className={classes.pos} color="textSecondary">
+                    { props.user.languages.map((l) => { return l.name }).join(', ') }
+                </Typography>
+            </CardContent>
         </Card>
     );
 }
