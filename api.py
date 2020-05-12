@@ -64,31 +64,20 @@ class UserSerializer:
         }
 
 
-# def parse_languages(languages):
-#     if not languages or languages == '[]':
-#         return []
-#     return [int(l) for l in languages[1:-1].split(',')]
-
-
 class UserListResource(Resource):
     def get(self):
+
         backend = strtobool(request.args.get('backend'))
         frontend = strtobool(request.args.get('frontend'))
         languages = [int(l) for l in request.args.getlist('languages[]')]
-        print('[INFO] ')
-        print(languages)
 
         users = User.query.all()
 
         if backend and not frontend:
-            print('[INFO] Showing backend users')
             users = [user for user in users if user.backend]
         elif frontend and not backend:
-            print('[INFO] Showing frontend users')
             users = [user for user in users if user.frontend]
 
-        # if languages:
-        #     print('doing languages')
         users = [
             user for user in users if
             set([l.id for l in user.languages]).intersection(set(languages))

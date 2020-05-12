@@ -53,7 +53,6 @@ export class UserList extends React.Component {
     }
 
     fetchUsers() {
-        console.log('fetching');
         const languages = this.state.languages.map((l) => {
             if (l.checked) {
                 return l.id;
@@ -62,18 +61,14 @@ export class UserList extends React.Component {
             return l !== undefined;
         })
 
-        console.log(languages);
         const params = {
             backend: this.state.checkedBackend,
             frontend: this.state.checkedFrontend,
             languages: languages,
         }
-        console.log(params)
         axios.get(`/api/users/`, {params})
             .then(res => {
-                console.log('Users retrieved');
                 const users = res.data.items;
-                console.log(users);
                 this.setState({users});
             }).catch(err => {
             console.log('failed to retrieve Users');
@@ -82,28 +77,27 @@ export class UserList extends React.Component {
     }
 
     fetchLanguages() {
-        axios.get(`/api/languages/`)
-            .then(res => {
-                console.log('Languages retrieved');
-                const languages = res.data.items.map(language =>  {
-                    return {
-                        checked: true,
-                        ...language
-                    }
-                });
-                console.log(languages)
-
-                this.setState({languages: languages});
-            }).catch(err => {
-            console.log('failed to retrieve Languages');
-            console.log(err)
+        return new Promise( (resolve, reject) => {
+            axios.get(`/api/languages/`)
+                .then(res => {
+                    const languages = res.data.items.map(language => {
+                        return {
+                            checked: true,
+                            ...language
+                        }
+                    });
+                    this.setState({languages: languages});
+                    resolve(this);
+                }).catch(err => {
+                console.log('failed to retrieve Languages');
+                console.log(err)
+                reject();
+            })
         })
     }
 
     componentDidMount() {
-        console.log('UserList mounted');
-        this.fetchUsers();
-        this.fetchLanguages()
+        this.fetchLanguages().then(this.fetchUsers.bind(this));
     }
 
     render() {

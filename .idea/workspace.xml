@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a886f37-6cad-4d10-af52-5fe395397ad9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vqf/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vqf/src/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/vqf/src/UserCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,7 @@
       <workItem from="1588944703542" duration="1537000" />
       <workItem from="1588946572650" duration="7373000" />
       <workItem from="1588961933551" duration="17566000" />
-      <workItem from="1589308872214" duration="7364000" />
+      <workItem from="1589308872214" duration="7527000" />
     </task>
     <servers />
   </component>
