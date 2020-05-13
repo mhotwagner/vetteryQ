@@ -1,12 +1,22 @@
 from flask import request
+from flask_graphql import GraphQLView
 
 from app import app, fake, load_fixtures, api
 from models import User, initialize_db
-from api import UserListResource, FrameworkListResource, LanguageListResource
+from api import UserListResource, FrameworkListResource, LanguageListResource, schema
 
 api.add_resource(UserListResource, '/api/users/')
 api.add_resource(FrameworkListResource, '/api/frameworks/')
 api.add_resource(LanguageListResource, '/api/languages/')
+
+app.add_url_rule(
+    '/graphql',
+    view_func=GraphQLView.as_view(
+        'graphql',
+        schema=schema,
+        graphiql=True,  # for having the GraphiQL interface
+    )
+)
 
 
 @app.route('/users/generate/')

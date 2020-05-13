@@ -1,7 +1,9 @@
 from distutils.util import strtobool
 
+import graphene
 from flask import request
 from flask_restful import Resource
+from graphene_sqlalchemy import SQLAlchemyObjectType, SQLAlchemyConnectionField
 
 from models import User, Framework, Language
 
@@ -86,3 +88,45 @@ class UserListResource(Resource):
         return {
             'items': [UserSerializer(user).data for user in users]
         }
+
+
+# GraphQL Schema
+class LanguageAttributes:
+    name = graphene.String()
+
+
+class LanguageObject(SQLAlchemyObjectType, LanguageAttributes):
+    class Meta:
+        model = Language
+        interfaces = (graphene.relay.Node, )
+
+
+class FrameworkAttributes:
+    id = graphene.ID()
+    name = graphene.String()
+
+class FrameworkObject(SQLAlchemyObjectType):
+    class Meta:
+        model = Framework
+        interfaces = (graphene.relay.Node, )
+
+
+class UserObject(SQLAlchemyObjectType):
+    class Meta:
+        model = User
+        interfaces = (graphene.relay.Node,)
+
+
+class Query(graphene.ObjectType):
+    node = graphene.relay.Node.Field()
+
+    language = graphene.relay.Node.Field(LanguageObject)
+
+    languages = SQLAlchemyConnectionField(UserObject)
+
+    framework = SQLAlchemyConnectionField(UserObject)
+
+    user = SQLAlchemyConnectionField(UserObject)
+
+
+schema = graphene.Schema(query=Query)

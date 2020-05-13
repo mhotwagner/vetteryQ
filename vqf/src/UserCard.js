@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 345,
         marginBottom: '1em',
     },
-    media: {
+    media: {w
         height: 0,
         paddingTop: '56.25%', // 16:9
     },
